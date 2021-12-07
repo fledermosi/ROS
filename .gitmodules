@@ -1,12 +1,12 @@
 [submodule "turtlebot3_simulations"]
-	path = turtlebot3_simulations
+	path = src/turtlebot3_simulations
 	url = https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
 [submodule "rosplan_demos"]
-	path = rosplan_demos
+	path = src/rosplan_demos
 	url = https://github.com/KCL-Planning/rosplan_demos.git
 [submodule "ROSPlan"]
-	path = ROSPlan
+	path = src/ROSPlan
 	url = https://github.com/KCL-Planning/ROSPlan.git
 [submodule "occupancy_grid_utils"]
-	path = occupancy_grid_utils
+	path = src/occupancy_grid_utils
 	url = https://github.com/clearpathrobotics/occupancy_grid_utils
