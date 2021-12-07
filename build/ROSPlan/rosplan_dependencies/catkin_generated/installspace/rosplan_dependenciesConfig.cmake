@@ -67,14 +67,14 @@ set(rosplan_dependencies_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(rosplan_dependencies_SOURCE_PREFIX /home/lukas/catkin_ws/src/ROSPlan/rosplan_dependencies)
-  set(rosplan_dependencies_DEVEL_PREFIX /home/lukas/catkin_ws/devel)
+  set(rosplan_dependencies_SOURCE_PREFIX /home/georg/rosplan_ws/src/ROSPlan/rosplan_dependencies)
+  set(rosplan_dependencies_DEVEL_PREFIX /home/georg/rosplan_ws/devel)
   set(rosplan_dependencies_INSTALL_PREFIX "")
   set(rosplan_dependencies_PREFIX ${rosplan_dependencies_DEVEL_PREFIX})
 else()
   set(rosplan_dependencies_SOURCE_PREFIX "")
   set(rosplan_dependencies_DEVEL_PREFIX "")
-  set(rosplan_dependencies_INSTALL_PREFIX /home/lukas/catkin_ws/install)
+  set(rosplan_dependencies_INSTALL_PREFIX /home/georg/rosplan_ws/install)
   set(rosplan_dependencies_PREFIX ${rosplan_dependencies_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(rosplan_dependencies_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "include;/opt/ros/melodic/include;/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp;/usr/include " STREQUAL " ")
+if(NOT "include;/home/georg/catkin_ws/devel/include;/opt/ros/melodic/include;/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp;/usr/include " STREQUAL " ")
   set(rosplan_dependencies_INCLUDE_DIRS "")
-  set(_include_dirs "include;/opt/ros/melodic/include;/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp;/usr/include")
+  set(_include_dirs "include;/home/georg/catkin_ws/devel/include;/opt/ros/melodic/include;/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp;/usr/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/lukas/catkin_ws/install/lib;/opt/ros/melodic/lib)
+    foreach(path /home/georg/rosplan_ws/install/lib;/home/georg/catkin_ws/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

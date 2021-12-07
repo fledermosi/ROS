@@ -1,4 +1,4 @@
-prefix=/home/lukas/catkin_ws/install
+prefix=/home/georg/rosplan_ws/install
 
 Name: rosplan_knowledge_msgs
 Description: Description of rosplan_knowledge_msgs
